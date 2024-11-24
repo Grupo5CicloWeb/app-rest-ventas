@@ -6,6 +6,7 @@ import pe.edu.cibertec.apprestventas.model.Category;
 import pe.edu.cibertec.apprestventas.repository.CategoryRepository;
 
 import java.util.List;
+import java.util.Optional;
 
 @RequiredArgsConstructor
 @Service
@@ -14,12 +15,12 @@ public class CategoryService implements ICategoryService {
 
     @Override
     public List<Category> findAll() {
-        return List.of();
+        return categoryRepository.findAll();
     }
 
     @Override
-    public Category findById(int id) {
-        return null;
+    public Optional<Category> findById(int id) {
+        return categoryRepository.findById(id);
     }
 
     @Override
