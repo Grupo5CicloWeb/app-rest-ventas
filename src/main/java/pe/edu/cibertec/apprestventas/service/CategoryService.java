@@ -27,4 +27,12 @@ public class CategoryService implements ICategoryService {
     public Category save(Category category) {
         return categoryRepository.save(category);
     }
+
+    @Override
+    public Category updateCategoryName(Category category) {
+        categoryRepository.actualizarNombreCategoria(
+                category.getCategoryid(),
+                category.getCategoryname());
+        return category;
+    }
 }

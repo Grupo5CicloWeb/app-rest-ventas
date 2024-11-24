@@ -13,4 +13,6 @@ public interface ICategoryService {
 
     Category save(Category category);
 
+    Category updateCategoryName(Category category);
+
 }
