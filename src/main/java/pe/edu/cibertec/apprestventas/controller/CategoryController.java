@@ -3,10 +3,7 @@ package pe.edu.cibertec.apprestventas.controller;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import pe.edu.cibertec.apprestventas.exception.ResourceNotFoundException;
 import pe.edu.cibertec.apprestventas.model.Category;
 import pe.edu.cibertec.apprestventas.service.ICategoryService;
@@ -41,5 +38,14 @@ public class CategoryController {
         return new ResponseEntity<>(category,
                 HttpStatus.OK);
     }
+    @PostMapping
+    public ResponseEntity<Category> guardarCategoria(
+            @RequestBody Category category) {
+        return new ResponseEntity<>(
+                categoryService.save(category),
+                HttpStatus.CREATED);
+    }
+
+
 
 }

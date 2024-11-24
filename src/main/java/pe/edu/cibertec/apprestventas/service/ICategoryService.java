@@ -11,6 +11,6 @@ public interface ICategoryService {
 
     Optional<Category> findById(int id);
 
-    void save(Category category);
+    Category save(Category category);
 
 }
