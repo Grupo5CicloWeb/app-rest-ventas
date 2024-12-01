@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 import pe.edu.cibertec.apprestventas.dto.ArchivoDto;
-import pe.edu.cibertec.apprestventas.service.FileService;
 import pe.edu.cibertec.apprestventas.service.IFileService;
 
 import java.util.List;
